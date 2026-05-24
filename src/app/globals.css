@@ -1,26 +1,68 @@
 @import "tailwindcss";
 
+@theme {
+  /* =========================================================
+     デジタル庁デザインシステム (Blue / Light Blue パレットベース)
+     ========================================================= */
+
+  /* メインのカラーシステム（Blue / Light Blue） */
+  --color-indigo-50: #D9E6FF;  /* Blue 50 */
+  --color-indigo-100: #D9E6FF; /* Blue 50 fallback */
+  --color-indigo-200: #C5D7FB; /* Blue 200 */
+  --color-indigo-300: #7096F8; /* Blue 400 fallback */
+  --color-indigo-400: #7096F8; /* Blue 400 */
+  --color-indigo-500: #7096F8; /* Blue 400 (focus rings etc.) */
+  --color-indigo-600: #3460FB; /* Blue 600 (ポジティブ・強調) */
+  --color-indigo-700: #0017C1; /* Blue 900 (リンク・ハイライト) */
+  --color-indigo-800: #000060; /* Blue 1200 fallback */
+  --color-indigo-900: #000060; /* Blue 1200 (最も濃い紺色) */
+
+  /* Light Blue（薄い青色）の段階パレット */
+  --color-blue-50: #F0F9FF;  /* Light Blue 50 */
+  --color-blue-100: #E0F2FE; /* Light Blue 100 fallback */
+  --color-blue-200: #C0E4FF; /* Light Blue 200 */
+  --color-blue-300: #7DD3FC; /* Light Blue 300 fallback */
+  --color-blue-400: #57B8FF; /* Light Blue 400 */
+  --color-blue-500: #38BDF8; /* Light Blue 500 fallback */
+  --color-blue-600: #008BF2; /* Light Blue 600 */
+  --color-blue-700: #0284C7; /* Light Blue 700 fallback */
+  --color-blue-800: #0055AD; /* Light Blue 900 (used for badge text) */
+  --color-blue-900: #0055AD; /* Light Blue 900 */
+
+  /* ダッシュボード・画面全体の組み合わせ（グレースケール・背景・テキスト） */
+  --color-gray-50: #F8F8FB;  /* 標準背景色 */
+  --color-gray-100: #F1F1F4; /* コントロール（ボタン等の背景） */
+  --color-gray-200: #E6E6EA; /* ボーダー用中間色 */
+  --color-gray-300: #D4D4D8; /* Input枠等 */
+  --color-gray-400: #A1A1AA;
+  --color-gray-500: #626264; /* ラベル（薄い文字） */
+  --color-gray-600: #626264; /* ラベル（同上） */
+  --color-gray-700: #3F3F41; /* 本文より少し薄い文字 */
+  --color-gray-800: #1F1F21;
+  --color-gray-900: #000000; /* 基本テキスト（黒） */
+
+  /* 状態や意味（セマンティックカラー）を表す組み合わせ */
+  --color-red-100: #FFEFEF;  /* Error Bg */
+  --color-red-500: #FE3939;  /* ネガティブ（減少・警告など） */
+  --color-red-600: #CE0000;  /* エラー（異常など） */
+
+  --color-green-50: #EBF8F2; /* Success Bg */
+  --color-green-100: #D8F2E4;
+  --color-green-600: #197A4B; /* 成功（達成など） */
+  --color-green-800: #105934; /* Success Dark */
+
+  --color-yellow-50: #FFF9E6; /* Warning Bg */
+  --color-yellow-100: #FFF3CC;
+  --color-yellow-800: #A58000; /* セカンダリー（比較対象データなど） */
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: var(--color-gray-50);
+  --foreground: var(--color-gray-900);
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
