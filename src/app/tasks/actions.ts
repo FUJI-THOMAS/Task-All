@@ -3,8 +3,9 @@
 import { submitToGas } from '@/lib/gasClient';
 import { getCurrentEmployeeId } from '@/lib/auth';
 import { revalidatePath } from 'next/cache';
+import { TaskStatus } from '@/lib/types';
 
-export async function updateTaskAction(taskId: string, newStatus: string, memo: string) {
+export async function updateTaskAction(taskId: string, newStatus: TaskStatus, memo: string) {
   const empId = await getCurrentEmployeeId();
   if (!empId) throw new Error("Unauthorized");
 
