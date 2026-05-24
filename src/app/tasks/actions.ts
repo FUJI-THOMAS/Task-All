@@ -19,7 +19,6 @@ export async function updateTaskAction(taskId: string, newStatus: TaskStatus, me
       statusAfter: newStatus,
       memo: memo,
       rawInput: "Quick update from list",
-      aiJson: "",
       source: "web"
     });
 

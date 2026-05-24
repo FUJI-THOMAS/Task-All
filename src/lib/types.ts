@@ -79,7 +79,7 @@ export type UpdateRequest = {
   statusAfter: TaskStatus;
   memo?: string;
   rawInput: string;
-  aiJson: AiParsedReport;
+  aiJson?: AiParsedReport;
   source: 'web' | 'mobile';
 };
 
